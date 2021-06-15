@@ -12,7 +12,7 @@ nav{
 i{
     font-size: 60px;
     color: rgb(60, 255, 0);
-    text-shadow: rgba(0, 0, 0, 0.432) 50px 10px 2ch;
+    text-shadow: rgba(0, 0, 0, 0.432) 50px 10px 4px;
 }
 
 footer{
@@ -25,6 +25,5 @@ footer{
 
 /* css do arquivo index */
 .teste{
-    color: indigo;
     text-shadow:rgb(13, 93, 197) 30px 10px 4px;
 }
