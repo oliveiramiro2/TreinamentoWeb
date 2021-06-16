@@ -3,5 +3,21 @@
 {% block title %}Página Inicial{% endblock %}
 
 {% block content %}
-    <h1 class="teste">Deu certo</h1>
+    <div class="offset_1 col-10 list-div">
+        <h1>Lista de tarefas</h1>
+        <div class="col-2 add-div">
+            <i class="fas fa-plus"></i> <span>Adicionar tarefa</span>
+        </div>
+        <div class="col-9 search-div">
+            <input type="text" id="search" placeholder="Procurar tarefa">
+            <i class="fas fa-search"></i>
+        </div>
+        <ul class="track-list">
+            <li class="track-item">
+                <span>Título da Tarefa</span>
+                <span><i class="fas fa-trash"></i></span>
+                <span><i class="fas fa-edit"></i></span>
+            </li>
+        </ul>
+    </div>
 {% endblock %}
