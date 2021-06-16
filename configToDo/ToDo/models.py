@@ -3,8 +3,8 @@ from django.db import models
 class Task(models.Model):
     
     STATUS = (
-        (1, 'Doing'),
-        (2, 'Done'),
+        ('doing', 'Doing'),
+        ('done', 'Done'),
     )
     
     title = models.CharField(max_length=255)
