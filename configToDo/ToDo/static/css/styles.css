@@ -20,6 +20,10 @@
     border-radius: 70px;
 }
 
+.add-task {
+    text-decoration: none;
+}
+
 .fas.fa-plus {
     color: #00ff40;
     margin-right: 2px;
