@@ -1,3 +1,45 @@
+/*btn add tarefa*/
+.add-div {
+    background-color: #3476e2;
+    cursor: pointer;
+    display: inline-block;
+    color: #fff;
+    margin-left: 70px;
+    padding: 8px;
+    border-radius: 7px;
+    margin-right: 5px;
+}
+
+.add-div:hover {
+    background-color: #3477e291;
+    text-shadow: #3477e291 6px 8px 2px;
+    color: #00fd3fde;
+    font-size: 15px;
+    font-family:monospace;
+    transition: ease-in-out 1.5s;
+    border-radius: 70px;
+}
+
+.fas.fa-plus {
+    color: #00ff40;
+    margin-right: 2px;
+    margin-left: 5px;
+}
+
+/*search*/
+.fas.fa-search {
+    position: absolute;
+    top: 12px;
+    right: 26px;
+}
+
+.search-div {
+    padding: 0px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
 /* lista de tarefas */
 h1 {
     margin: 10px 0 10px 500px;
@@ -7,39 +49,33 @@ h1 {
     padding: 0;
 }
 
-.track-list {
+.task-list {
     padding-left: 0;
 }
 
-.track-item {
+.task-item {
     list-style: none;
     font-size: 20px;
     height: 50px;
-    padding-top: 10px;
+    padding: 10px 90px;
+    margin-left: 70px;
     border: 1px dashed paleturquoise;
+    border-radius: 10px;
 }
 
-.fas.fa-edit,  .fas.fa-trash, .fas.fa-plus {
+.fas.fa-edit,  .fas.fa-trash {
     cursor: pointer;
     margin: 5px;
     font-size: 20px;
     float: right;
 }
 
-.div-top {
-    display: inline;
-    margin: 19px 51px;
-}
-
-.div-search{
-    margin-left: 100px;
-}
 
 .fas.fa-trash {
     color: #db1647;
 }
 
-.fas.fa-edit, .fas.fa-plus {
+.fas.fa-edit {
     color: #13c43f;
 }
 
