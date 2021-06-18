@@ -28,7 +28,7 @@ def editTask(request, id):
     form = TaskForm(instance=task)
     if request.method == 'POST':
         
-        form = TaskForm(request.POST, instance=Task)
+        form = TaskForm(request.POST, instance=task)
         if form.is_valid():
             task.save()
             return redirect('/')
