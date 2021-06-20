@@ -144,12 +144,13 @@ ul.messages li {
 
 /*animacao setas paginacao*/
 .fas.fa-arrow-left:hover {
-    animation: setaes 2s;
+    animation: setaes 2s infinite;
 }
 
 @keyframes setaes{
     from {
         transform: translateX(-4px);
+        
         font-size: 18px;
         color: #005ff8;
         transition: ease;
@@ -176,66 +177,52 @@ ul.messages li {
         transition: ease;
     }
 
-    80% {
+    to {
         transform: translateX(-4px);
         font-size: 18px;
         color: #005ff8;
-        transition: ease;  
-    }
-
-    to {
-        transform: translateX(4px);
-        font-size: 14px;
-        color: #457dd8ab;
         transition: ease;
     }
 }
 
 .fas.fa-arrow-right:hover {
-    animation: setadir 2s;
+    animation: setadir 2s infinite;
 }
 
 @keyframes setadir{
     from {
-        transform: translateX(-4px);
-        font-size: 14px;
-        color: #457dd8ab;
+        transform: translateX(4px);
+        font-size: 18px;
+        color: #005ff8;
         transition: ease;
     }
 
     20% {
-        transform: translateX(4px);
-        font-size: 18px;
-        color: #005ff8;
+        transform: translateX(-4px);
+        font-size: 14px;
+        color: #457dd8ab;
         transition: ease;
     }
 
     40% {
-        transform: translateX(-4px);
-        font-size: 14px;
-        color: #457dd8ab;
+        transform: translateX(4px);
+        font-size: 18px;
+        color: #005ff8;
         transition: ease; 
     }
 
     60% {
-        transform: translateX(4px);
-        font-size: 18px;
-        color: #005ff8;
-        transition: ease;
-    }
-
-    80% {
         transform: translateX(-4px);
         font-size: 14px;
         color: #457dd8ab;
-        transition: ease;  
+        transition: ease;
     }
 
     to {
         transform: translateX(4px);
         font-size: 18px;
         color: #005ff8;
-        transition: ease;
+        transition: ease; 
     }
 }
 
