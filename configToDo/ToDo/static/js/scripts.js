@@ -1,6 +1,9 @@
-function confirmaExclusao(){
-    if (confirm("Realmente deseja excluir esta tarefa?")){
-        return 1
-    }
-return 0
-}
+$(document).ready(() => {
+    //search variaveis
+    const searchBtn = $('#search-btn')
+    const searchForm = $('#search-form')
+
+    $(searchBtn).on('click', () => {
+        searchForm.subit()
+    })
+})

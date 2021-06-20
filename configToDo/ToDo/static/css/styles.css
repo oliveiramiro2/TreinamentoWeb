@@ -1,10 +1,10 @@
 
 /*fundo da tela*/
 body {
-    background-image: linear-gradient(rgba(238, 241, 241, 0.522), rgba(236, 241, 241, 0.822),
-    rgba(238, 241, 241, 0.522), rgba(236, 241, 241, 0.822), rgba(238, 241, 241, 0.522),
-    rgba(236, 241, 241, 0.822),rgba(238, 241, 241, 0.522), rgba(236, 241, 241, 0.822), 
-    rgba(238, 241, 241, 0.522), rgba(236, 241, 241, 0.822), rgba(238, 241, 241, 0.522));
+    background-image: radial-gradient(rgba(238, 241, 241, 0.281), rgba(236, 241, 241),
+    rgba(238, 241, 241, 0.281), rgba(236, 241, 241, 0.822), rgba(238, 241, 241, 0.522),
+    rgba(236, 241, 241, 0.822),rgba(238, 241, 241, 0.281), rgba(236, 241, 241, 0.822), 
+    rgba(238, 241, 241, 0.281), rgba(236, 241, 241), rgba(238, 241, 241, 0.522));
     height: 100%;
     width: 100%;
 }
@@ -16,7 +16,7 @@ nav {
 
 /*titulo pagina*/
 h1 {
-    margin: 10px 0 10px 50%;
+    margin: 10px 0 10px 45%;
 }
 
 /*btn add tarefa*/
@@ -57,6 +57,7 @@ h1 {
     position: absolute;
     top: 12px;
     right: 26px;
+    cursor: pointer;
 }
 
 .search-div {
@@ -64,6 +65,12 @@ h1 {
     margin-top: 15px;
     margin-bottom: 15px;
     display: inline-block;
+}
+
+.fas.fa-search:hover {
+    background-color: aquamarine;
+    font-size: 18px;
+    transition: 1s ease;
 }
 
 /* lista de tarefas */
@@ -83,8 +90,9 @@ h1 {
     margin-left: 90px;
     margin-top: 5px;
     width: 100%;
-    border: 2px dashed rgba(0, 210, 247, 0.295);
+    border: 2px dashed rgba(48, 2, 255, 0.541);
     border-radius: 10px;
+    background: repeating-radial-gradient( rgba(65, 3, 211, 0.767) 50%, rgba(3, 219, 247, 0.507) 50%);
 }
 
 .fas.fa-edit,  .fas.fa-trash {
@@ -95,9 +103,9 @@ h1 {
 }
 
 .fas.fa-edit:hover,  .fas.fa-trash:hover {
-    transform: translateY(-4px);
+    transform: translateY(-5px);
     box-shadow: 4px 9px rgba(134, 133, 133, 0.438);
-    transition: ease 0.6s;
+    transition: step-start 0.4s;
 }
 
 .fas.fa-trash {
@@ -125,6 +133,7 @@ ul.messages li {
 .step-links {
     position: relative;
     margin-left: 53%;
+    top: -8px;
     margin-right: auto;
     background-color: rgba(194, 216, 235, 0.432);
 }
@@ -144,7 +153,7 @@ ul.messages li {
 
 /*animacao setas paginacao*/
 .fas.fa-arrow-left:hover {
-    animation: setaes 2s infinite;
+    animation: setaes 1.5s infinite;
 }
 
 @keyframes setaes{
@@ -186,7 +195,7 @@ ul.messages li {
 }
 
 .fas.fa-arrow-right:hover {
-    animation: setadir 2s infinite;
+    animation: setadir 1.5s infinite;
 }
 
 @keyframes setadir{

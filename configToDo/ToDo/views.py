@@ -1,15 +1,21 @@
 from django.contrib import messages
 from django.core.paginator import Paginator
 from ToDo.forms import TaskForm
-from django.db import models
 from django.shortcuts import redirect, render, get_object_or_404, redirect
 from .models import Task
 
+
 def homePage(request):
-    tasks_list = Task.objects.all().order_by('-created_at')
-    paginator = Paginator(tasks_list, 5)
-    page = request.GET.get('page')
-    tasks = paginator.get_page(page)
+    search = request.GET.get("search")
+    if search:
+        #filtro
+        tasks = Task.objects.filter(title__icontains=search)
+    else:
+        #tarefas e paginacao sem filto
+        tasks_list = Task.objects.all().order_by('-created_at')
+        paginator = Paginator(tasks_list, 5)
+        page = request.GET.get('page')
+        tasks = paginator.get_page(page)
     return render(request, 'todo/index.html', {'tasks': tasks})
 
 def taskView(request, id):
