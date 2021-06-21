@@ -7,11 +7,14 @@ body {
     rgba(238, 241, 241, 0.281), rgba(236, 241, 241), rgba(238, 241, 241, 0.522));
     height: 100%;
     width: 100%;
+    overflow-x: hidden;
 }
 
 /*cabecalho*/
 nav {
-    opacity: 0.4;
+    opacity: 0.6;
+    border:rgba(40, 3, 247, 0.74) groove 3px;
+    height: 60px;
 }
 
 /*titulo pagina*/
@@ -35,7 +38,7 @@ h1 {
     background-color: #3477e291;
     text-shadow: #3477e291 -6px 8px 2px;
     transform: translateX(-5px);
-    color: #00fd3fde;
+    color: #00fd2afd;
     font-size: 15px;
     font-family:monospace;
     transition: ease-in-out 1s;
@@ -90,7 +93,7 @@ h1 {
     margin-left: 90px;
     margin-top: 5px;
     width: 100%;
-    border: 2px dashed rgba(48, 2, 255, 0.541);
+    border: 2px groove rgba(48, 2, 255, 0.541);
     border-radius: 10px;
     background: repeating-radial-gradient( rgba(65, 3, 211, 0.767) 50%, rgba(3, 219, 247, 0.507) 50%);
 }
@@ -240,12 +243,12 @@ ul.messages li {
     display: inline-block;
     margin: 0.5% 50%;
     height: 20px;
-    opacity: 0.3;
+    opacity: 0.5;
 }
 
 .far.fa-laugh-wink {
     font-size: 50px;
-    color: rgb(60, 255, 0);
+    color: rgb(136, 255, 0);
     text-shadow: rgba(0, 0, 0, 0.432) 39px 11px 4px;
 }
 
@@ -256,4 +259,20 @@ footer {
     height: 65px;
 }
 
+/*login*/
 
+.auth-card {
+    margin-top: 12%;
+    padding: 25px;
+    background-color: #3477e26b;
+    border-radius: 10%;
+    border: rgba(3, 219, 247, 0.507) groove 10px;
+}
+
+.txt-login {
+    margin-bottom: 30px;
+}
+
+.btn-login {
+    margin-top: 40px;
+}
