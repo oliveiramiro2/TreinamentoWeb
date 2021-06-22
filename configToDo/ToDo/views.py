@@ -11,7 +11,7 @@ def homePage(request):
     search = request.GET.get("search")
     if search:
         #filtro
-        tasks = Task.objects.filter(title__icontains=search, user=request.user).all.order_by('-created_at')
+        tasks = Task.objects.filter(title__icontains=search, user=request.user)
     else:
         #tarefas e paginacao sem filto
         tasks_list = Task.objects.all().order_by('-created_at').filter(user=request.user)
@@ -60,4 +60,16 @@ def delTask(request, id):
     task = get_object_or_404(Task, pk=id)
     task.delete()
     messages.info(request, 'Tarefa deletada com sucesso!!')
+    return redirect('/')
+
+@login_required
+def changeStatus(request, id):
+    task = get_object_or_404(Task, pk=id)
+    
+    if task.done == '1':
+        task.done = '2'
+    else:
+        task.done - '1'
+        
+    task.save()
     return redirect('/')
