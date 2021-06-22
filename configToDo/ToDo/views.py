@@ -69,7 +69,7 @@ def changeStatus(request, id):
     if task.done == '1':
         task.done = '2'
     else:
-        task.done - '1'
+        task.done = '1'
         
     task.save()
     return redirect('/')
