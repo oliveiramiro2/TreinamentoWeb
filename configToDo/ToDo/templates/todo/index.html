@@ -16,6 +16,14 @@
                 <i class="fas fa-search" id="search-btn"></i> 
             </form>                 
         </div>
+        <div class="col-12 filter-div">
+            <span class="txt-filter">Filtrar por:</span>
+            <select name="Filter" id="filter" class="form-control">
+                <option value="">Escolha uma opção</option>
+                <option value="1">Fazendo tarefa</option>
+                <option value="2">Tarefa concluida</option>
+            </select>
+        </div>
         {% if messages %}
             <ul class="messages">
                 {% for message in messages %}
@@ -30,7 +38,7 @@
                 {% else %}
                 <li class="task-item done">
                 {% endif %}
-                        <span><a href="/tasks/{{task.id}}">{{task.title}}</a></span>
+                        <span><a href="/tasks/{{task.id}}" class="title-task">{{task.title}}</a></span>
                         <span><a href="/delete/{{task.id}}"><i class="fas fa-trash"></i></a></span>
                         <a href="edit/{{task.id}}"><span><i class="fas fa-edit"></i></span></a>
                         <a href="changestatus/{{task.id}}"><span><i class="fas fa-check"></i></span></a>

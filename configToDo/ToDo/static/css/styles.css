@@ -71,10 +71,24 @@ h1 {
     display: inline-block;
 }
 
-.fas.fa-search:hover {
-    background-color: aquamarine;
+/*filtro*/
+.txt-filter {
     font-size: 18px;
-    transition: 1s ease;
+    margin-bottom: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.filter-div {
+    margin-bottom: 15px;
+    padding: 0;
+    margin: 10px 90px;
+    margin-bottom: 30px;
+}
+
+.filter {
+    display: inline-block;
+    width: 200px;
+    margin-left: 10px;
 }
 
 /* lista de tarefas */
@@ -96,12 +110,17 @@ h1 {
     width: 100%;
     border: 2px groove rgba(48, 2, 255, 0.541);
     border-radius: 10px;
-    background: repeating-radial-gradient( rgba(65, 3, 211, 0.767) 50%, rgba(3, 219, 247, 0.507) 50%);
+    background: repeating-radial-gradient( rgba(65, 3, 211, 0.233) 50%, rgba(3, 219, 247, 0.178) 50%); 
 }
 
 .task-item.done {
-    background-color: #ccc;
+    background-color: rgb(78, 75, 75);
     opacity: 0.6;
+}
+
+.title-task {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
 }
 
 .fas.fa-edit,  .fas.fa-trash, .fas.fa-check {
