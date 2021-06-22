@@ -11,10 +11,10 @@ def homePage(request):
     search = request.GET.get("search")
     if search:
         #filtro
-        tasks = Task.objects.filter(title__icontains=search)
+        tasks = Task.objects.filter(title__icontains=search, user=request.user).all.order_by('-created_at')
     else:
         #tarefas e paginacao sem filto
-        tasks_list = Task.objects.all().order_by('-created_at')
+        tasks_list = Task.objects.all().order_by('-created_at').filter(user=request.user)
         paginator = Paginator(tasks_list, 5)
         page = request.GET.get('page')
         tasks = paginator.get_page(page)
@@ -32,6 +32,7 @@ def newTask(request):
         if form.is_valid():
             task = form.save(commit=False)
             task.done = '1'
+            task.user = request.user
             task.save()
             return redirect('/')
     else:

@@ -260,7 +260,7 @@ footer {
     margin-top: 50px;
 }
 
-/*login*/
+/*login e registro*/
 
 .auth-card {
     margin-top: 12%;
@@ -276,4 +276,9 @@ footer {
 
 .btn-login {
     margin-top: 40px;
+}
+
+.change-form-p {
+    margin-top: 30px;
+    text-align: center;
 }
