@@ -5,6 +5,22 @@
 {% block content %}
     <div class="offset_1 col-10 list-div">
         <h1>Lista de tarefas</h1>
+
+        <div class="container dashboard">
+            <div class="dashboard-box col-4" id="dashboard-lastdays">
+                <h4>Finalizada nos últimos 30 dias</h4>
+                <span>{{tasksrecently}}</span>
+            </div>
+            <div class="dashboard-box col-4" id="dashboard-done">
+                <h4>Tarefas finalizadas</h4>
+                <span>{{tasksdone}}</span>
+            </div>
+            <div class="dashboard-box col-4" id="dashboard-doing">
+                <h4>Tarefas sendo feitas</h4>
+                <span>{{tasksdoing}}</span>
+            </div>
+        </div>
+
         <a id="add-task" href="newtask/">
            <div class="col-2 add-div">
                 <i class="fas fa-plus"></i> Adicionar tarefa  
@@ -12,7 +28,7 @@
         </a>
         <div class="col-9 search-div"> 
             <form method="GET" id="search-form">
-                <input class="form-control" type="text" id="search" name="search" placeholder="Procurar tarefa" value="{{ request.GET.search }}" autocomplete="off">
+                <input class="form-control" type="text" id="search" autofocus="true" name="search" placeholder="Procurar tarefa" value="{{ request.GET.search }}" autocomplete="off">
                 <i class="fas fa-search" id="search-btn"></i> 
             </form>                 
         </div>

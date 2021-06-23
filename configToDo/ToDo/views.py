@@ -4,12 +4,16 @@ from ToDo.forms import TaskForm
 from django.shortcuts import redirect, render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
 from .models import Task
+from datetime import datetime, timedelta
 
 
 @login_required
 def homePage(request):
     search = request.GET.get("search")
     filter = request.GET.get("filter")
+    tasksDoneRecently = Task.objects.filter(done='2', updated_at__gt=datetime.now() - timedelta(days=30)).count()
+    tasksDone = Task.objects.filter(done='2', user=request.user).count()
+    tasksDoing = Task.objects.filter(done='1', user=request.user).count()
     
     if search:
         #filtro
@@ -22,7 +26,10 @@ def homePage(request):
         paginator = Paginator(tasks_list, 5)
         page = request.GET.get('page')
         tasks = paginator.get_page(page)
-    return render(request, 'todo/index.html', {'tasks': tasks})
+    return render(request, 'todo/index.html', {'tasks': tasks, 
+                                               'tasksrecently': tasksDoneRecently, 
+                                               'tasksdone': tasksDone, 
+                                               'tasksdoing': tasksDoing})
 
 @login_required
 def taskView(request, id):
