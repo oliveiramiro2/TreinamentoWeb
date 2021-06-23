@@ -7,12 +7,14 @@ $(document).ready(() => {
     const filter = $('#filter')
 
     //search 
-    $(searchBtn).on('click', function() {
+    console.log(searchBtn)
+    $(searchBtn).on('click', () => {
         searchForm.submit()
     })
 
     //filtro
-    $(filter).change(this).val()
-    console.log(filter)
-    window.location.href = baseUrl + '?filter=', filter
+    $(filter).change( function() {
+        let filter = $(this).val()
+        window.location.href = baseUrl + '?filter=' + filter
+    })
 })
